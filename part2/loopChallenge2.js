@@ -36,3 +36,28 @@ for (let i = 0; i < cities?.length; i++) {
 }
 
 console.log(visitedCities);
+
+// 3 => Done using the for loop
+
+let numbers = [1, 2, 3, 4, 5];
+let smallNumbers = [];
+
+for (let i = 0; i < numbers?.length; i++) {
+  if (numbers[i] === 4) {
+    break;
+  }
+  smallNumbers?.push(numbers[i]);
+}
+
+console.log(smallNumbers);
+
+// Do this with for of
+
+for (const num of numbers) {
+  if (num === 4) {
+    break;
+  }
+  smallNumbers.push(num);
+}
+
+console.log(smallNumbers);

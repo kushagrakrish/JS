@@ -18,7 +18,7 @@ for (let t = 0; t < teas?.length; t++) {
   selectedTea?.push(finalTeas);
 }
 
-console.log(selectedTea);
+// console.log(selectedTea);
 
 // 2
 
@@ -35,7 +35,7 @@ for (let i = 0; i < cities?.length; i++) {
   visitedCities?.push(cities[i]);
 }
 
-console.log(visitedCities);
+// console.log(visitedCities);
 
 // 3 => Done using the for loop
 
@@ -49,7 +49,7 @@ for (let i = 0; i < numbers?.length; i++) {
   smallNumbers?.push(numbers[i]);
 }
 
-console.log(smallNumbers);
+// console.log(smallNumbers);
 
 // Do this with for of
 
@@ -60,4 +60,74 @@ for (const num of numbers) {
   smallNumbers.push(num);
 }
 
-console.log(smallNumbers);
+// console.log(smallNumbers);
+// 4
+
+let teaTypes = ["green tea", "herbal tea", "chai", "black tea"];
+let preferredTeas = [];
+
+for (const teas of teaTypes) {
+  if (teas === "herbal tea") {
+    continue;
+  }
+  preferredTeas?.push(teas);
+}
+
+// console.log(preferredTeas);
+
+// 5 Use a `for-in` loop to loop through an object containing city population and stop the loop when the population of "Berlin: is found and store all the previous cities in a new Object named 'cityPopulations"
+
+let citiesPopulation = {
+  London: 50000,
+  "New York": 21320,
+  Berlin: 23421,
+  USA: 1232,
+};
+
+let newCityPopulation = {};
+
+for (const city in citiesPopulation) {
+  if (city == "Berlin") {
+    break;
+  }
+  newCityPopulation[city] = citiesPopulation[city];
+}
+// console.log(newCityPopulation);
+
+let availableTeas = [];
+teaTypes?.forEach((tea) => {
+  if (tea === "chai") {
+    return;
+  }
+  availableTeas?.push(tea);
+});
+console.log(availableTeas);
+
+// l
+
+let array = [2, 5, 7, 9];
+let doubledNumbers = [];
+
+for (let i = 0; i < array?.length; i++) {
+  if (array[i] === 7) {
+    continue;
+  }
+  console.log(array[i]);
+  let doubledValue = 2 * array[i];
+  doubledNumbers?.push(doubledValue);
+}
+
+console.log(doubledNumbers);
+
+//
+let newTeas = ["green tea", "herbal tea", "chai", "jasmine tea", "black tea"];
+let shortTeas = [];
+
+for (const tea of newTeas) {
+  if (tea?.length > 10) {
+    break;
+  }
+  shortTeas?.push(tea);
+}
+
+console.log(shortTeas);

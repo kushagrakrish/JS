@@ -87,6 +87,6 @@ console.log(maxNum);
 
 const min = exArray7.reduce((acc, curr) => {
   return curr < acc ? curr : acc;
-}, exArray7[0]);
+}, exArray7[0]); 
 
 console.log(min);
